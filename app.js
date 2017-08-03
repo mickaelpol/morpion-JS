@@ -27,8 +27,12 @@ $(".case").click(function(){
 		}
 		count++;
 	}
-	console.log(data);
 });
+
+$('.reset').click(function(){
+	$('.case').empty();
+	count = 0;
+})
 
 
 
