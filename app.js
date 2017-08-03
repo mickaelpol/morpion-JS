@@ -2,11 +2,11 @@ var count = 0;
 var data = [];
 var position = "";
 
-player1 = prompt("entrez votre nom joueur 1 !");
-player2 = prompt("joueur 2 entrez votre nom !");
+// player1 = prompt("entrez votre nom joueur 1 !");
+// player2 = prompt("joueur 2 entrez votre nom !");
 
-$("#player1").html(player1);
-$("#player2").html(player2);
+// $("#player1").html(player1);
+// $("#player2").html(player2);
 
 
 $(".case").click(function(){
@@ -26,6 +26,7 @@ $(".case").click(function(){
 		
 		}
 		count++;
+
 	}
 });
 
