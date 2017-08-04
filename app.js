@@ -125,8 +125,7 @@ $(".case").on("click",function(){
 
 function verif(a, b, c){
 	if (a==b && a==c){
-console.log(piano)
-console.log(occitane)
+
 		if (a==piano){
 
 			alert("joueur 1 gagne ");
