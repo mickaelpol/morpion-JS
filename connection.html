@@ -11,7 +11,7 @@
 
   <!-- Modal -->
   <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="rounded modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header bg-info">
           <h5 class="modal-title text-info text-uppercase text-center" id="exampleModalLabel">Entrez vos pseudos</h5>
@@ -21,20 +21,28 @@
         </div>
         <div class="modal-body bg-primary">
           <div class="container">
+
+
+
+
+
             <div class="row">
               <form action="">
                 <div class="form-group col-sm-6 text-center text-capitalize">
                   <div class="col-sm-12">
                     <label for="joueur1">joueur1</label>
-                    <input class="form-control" placeholder="joueur1" type="text">
+                    <input id="player1" class="form-control" value="John Doe" placeholder="John Doe" type="text">
                   </div>
                 </div>
               </div>
+
+
+
               <div class="row">
                 <div class="from-group col-sm-6 text-center text-capitalize">
                   <div class="col-sm-12">
                     <label for="joueur1">joueur1</label>
-                    <input class="form-control" placeholder="joueur1" type="text">
+                    <input id="player2" class="form-control" value="Jane Doe" placeholder="Jane Doe" type="text">
                   </div>
                   <div class="col-sm-12">
                     <div class="footer-bouton modal-footer">
@@ -44,7 +52,21 @@
                   </div>
                 </div>
               </div>
+
+
+
             </form>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="col-sm-12" id="pasVu">
+                    <div id="loading">
+                      <img src="loading.GIF" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

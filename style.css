@@ -1,6 +1,9 @@
 body {
 	font-size: 16px;
-	margin-top: 10%;
+	margin-top: 10px;
+	background: url(1.jpg);
+	background-size: cover;
+	background-position: fixed;
 
 }
 
@@ -43,6 +46,12 @@ footer {
 
 .form-control:focus {
 	border-color: black;
+}
+.border {
+	border-radius: 50px;
+}
+.reset {
+	margin-top: 20px;
 }
 
 /**[class*="col-"],

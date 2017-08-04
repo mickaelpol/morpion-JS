@@ -1,17 +1,39 @@
 $(window ).on("load", function() {
+
+	$('#loading').hide();
 	$("#exampleModal").fadeIn();
 	$("#exampleModal").fadeIn("slow");
-	$("#exampleModal").fadeIn(5000);
+	$("#exampleModal").fadeIn(3000);
+
+	$('#sc').click(function(){
+
+
+	}),
+	$('#bouton').click(function(){
+		$('#exampleModal').hide(2000);
+
+	}),
+	$('#sc').click(function(){
+
+		$('#loading').fadeIn().delay(3000).fadeOut();
+
+		$(function(){
+			setTimeout(function(){ 
+				$('#exampleModal').fadeOut(1000, function(){
+					window.location.href = "index.html"
+				})
+			}, 4000);
+
+		})
+	
+	});
+	
+
+
+
 });
-$('#bouton').click(function(){
-	$('#exampleModal').hide(1000);
-})
 
 
-
-$("#sc").click(function(){
-	window.location="index.html";
-})
 
 
 
@@ -67,11 +89,12 @@ var objet = {};
 
 //--- player1 ----//
 
-$('#validerPlayer1').click(function(){
+$('#sc').click(function(){
+
 	var joueur1 = $('#player1').val();
 	objet.joueur1 = joueur1;
 	
-	$('#textePlayer1').html("Bienvenue " + objet.joueur1);
+	$('#textePlayer1').html(objet.joueur1);
 	
 });
 
@@ -79,26 +102,25 @@ $('#player1').change(function(){
 	objet.joueur1 = $('#player1').val();
 
 
-	$('#textePlayer1').html("Bienvenue " + objet.joueur1);
-console.log(objet);
+	$('#textePlayer1').html(objet.joueur1);
+
 });
 
 //---- player2---//
 
 
 
-$('#validerPlayer2').click(function(){
+$('#sc').click(function(){
 	var joueur2 = $('#player2').val();
 	objet.joueur2 = joueur2;
 
-	$('#textePlayer2').html("bievenue "+objet.joueur2);
+	$('#textePlayer2').html(objet.joueur2);
 });
 
 $('#player2').change(function(){
 	objet.joueur2 = $('#player2').val();
 
-	$('#textePlayer2').html("Bienvenu "+ objet.joueur2);
-console.log(objet)
+	 $('#textePlayer2').html(objet.joueur2);
 });
 
 
@@ -185,6 +207,7 @@ $('.reset').click(function(){
 	$('.case').empty();
 	joueur = 1;
 });
+
 
 
 
