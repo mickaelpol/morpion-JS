@@ -46,16 +46,17 @@ var objet = {};
 //--- player1 ----//
 
 $('#validerPlayer1').click(function(){
- var joueur1 = $('#player1').val();
- objet.joueur1 = joueur1;
+	var joueur1 = $('#player1').val();
+	objet.joueur1 = joueur1;
 
- $('#textePlayer1').html("Bienvenue " + objet.joueur1);
+	$('#textePlayer1').html("Bienvenue " + objet.joueur1);
+	console.log(joueur)
 });
 
 $('#player1').change(function(){
-  objet.joueur1 = $('#player1').val();
+	objet.joueur1 = $('#player1').val();
 
-  $('#textePlayer1').html("Bienvenue " + objet.joueur1);
+	$('#textePlayer1').html("Bienvenue " + objet.joueur1);
 
 });
 
@@ -64,26 +65,25 @@ $('#player1').change(function(){
 
 
 $('#validerPlayer2').click(function(){
-  var joueur2 = $('#player2').val();
-  objet.joueur2 = joueur2;
+	var joueur2 = $('#player2').val();
+	objet.joueur2 = joueur2;
 
-  $('#textePlayer2').html("bievenue "+objet.joueur2);
+	$('#textePlayer2').html("bievenue "+objet.joueur2);
 });
 
 $('#player2').change(function(){
-  objet.joueur2 = $('#player2').val();
+	objet.joueur2 = $('#player2').val();
 
-  $('#textePlayer2').html("Bienvenu "+ objet.joueur2);
+	$('#textePlayer2').html("Bienvenu "+ objet.joueur2);
 });
 
 
 // --------------------------------- deplacer une image --------//
 
-              // image joueur 1 et 2
 
 
-              var piano = "<img class='piano image img-responsive' width='150' height='100' src='image1.jpg'>";
-              var occitane = "<img class='occitane image img-responsive' width='150' height='100' src='image2.png'>";
+var piano = '<img class=" image img-responsive" src="image1.jpg">';
+var occitane = '<img class="image img-responsive" src="image2.png">';
 
 
 
@@ -91,29 +91,29 @@ $('#player2').change(function(){
 
 var joueur = 1;
 
-$('.case').on("click",function placeImage(){
-  if(joueur === 1){
+$(".case").on("click",function(){
+	if(joueur === 1){
 
-    if($(this).html()==""){
-      $(this).html(piano);
-      joueur=2;
+		if($(this).html()==""){
+			$(this).html(piano);
+			joueur=2;
 
-    }else{
-      alert("pose ta putin d'image ailleurs :@ ");
-    }
+		}else{
+			alert("pose ta putin d'image ailleurs :@ ");
+		}
 
 
-  } else if (joueur ===2){
+	} else if (joueur ===2){
 
-    if($(this).html()==""){
+		if($(this).html()==""){
 
-      $(this).html(occitane);
-      joueur=1;
+			$(this).html(occitane);
+			joueur=1;
 
-    }else{
-      alert("POSE TON IMAGE AILLEURS COMPRIS OU PAS ?!!! :@");
-    }
-  }
+		}else{
+			alert("POSE TON IMAGE AILLEURS COMPRIS OU PAS ?!!! :@");
+		}
+	}
 
 });
 
@@ -124,44 +124,43 @@ $('.case').on("click",function placeImage(){
 //--------------fonction de verification et message du winner wallah ta vu sartek -----//
 
 function verif(a, b, c){
+	if (a==b && a==c){
+console.log(piano)
+console.log(occitane)
+		if (a==piano){
 
-  if (a==b && a==c){
+			alert("joueur 1 gagne ");
 
-    if (a==piano){
+		}else if(a==occitane){
 
-      alert("deboite la gueule a ");
+			alert("joueur 2 gagne ");
 
-    }else if(a==occitane){
-
-      alert("deboite la gueule a ");
-
-    }
-          }
+		}
+	}
 
 };
 
 //---------------------- fonction de verif des position et conditions de win !! -----------//
 
-$(".case").click(function win()
-    {
-      return verif($("#case1").html(), $("#case2").html(), $("#case3").html())
-          || verif($("#case4").html(), $("#case5").html(), $("#case6").html())
-          || verif($("#case7").html(), $("#case8").html(), $("#case9").html())
-
-          || verif($("#case1").html(), $("#case4").html(), $("#case7").html())
-          || verif($("#case2").html(), $("#case5").html(), $("#case8").html())
-          || verif($("#case3").html(), $("#case6").html(), $("#case9").html())
-
-          || verif($("#case1").html(), $("#case5").html(), $("#case9").html())
-          || verif($("#case3").html(), $("#case5").html(), $("#case7").html());
+$(".case").on("click", function()
+{ 
+	return verif($("#case1").html(), $("#case2").html(), $("#case3").html())
+	|| verif($("#case4").html(), $("#case5").html(), $("#case6").html())
+	|| verif($("#case7").html(), $("#case8").html(), $("#case9").html())
+	|| verif($("#case1").html(), $("#case4").html(), $("#case7").html())
+	|| verif($("#case2").html(), $("#case5").html(), $("#case8").html())
+	|| verif($("#case3").html(), $("#case6").html(), $("#case9").html())
+	|| verif($("#case1").html(), $("#case5").html(), $("#case9").html())
+	|| verif($("#case3").html(), $("#case5").html(), $("#case7").html());
 
 
 
 });
 
+
 $('.reset').click(function(){
-  $('.case').empty();
-  joueur = 1;
+	$('.case').empty();
+	joueur = 1;
 });
 
 

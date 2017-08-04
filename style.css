@@ -13,6 +13,8 @@ body {
 .image {
 margin: 10% 10% 10% 10%;
 padding: 10% 10% 10% 10%;
+width: 150px;
+height: 100px;
 }
 .player {
 	font-size: 22px;
