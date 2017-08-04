@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css"/>
+  <title>connection au morback</title>
+</head>
+<body>
+
+  <!-- Modal -->
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-info">
+          <h5 class="modal-title text-info text-uppercase text-center" id="exampleModalLabel">Entrez vos pseudos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body bg-primary">
+          <div class="container">
+            <div class="row">
+              <form action="">
+                <div class="form-group col-sm-6 text-center text-capitalize">
+                  <div class="col-sm-12">
+                    <label for="joueur1">joueur1</label>
+                    <input class="form-control" placeholder="joueur1" type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="from-group col-sm-6 text-center text-capitalize">
+                  <div class="col-sm-12">
+                    <label for="joueur1">joueur1</label>
+                    <input class="form-control" placeholder="joueur1" type="text">
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="footer-bouton modal-footer">
+                      <button id="bouton" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button id ="sc" type="button" class="btn btn-success">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

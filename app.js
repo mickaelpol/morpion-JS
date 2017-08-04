@@ -1,3 +1,25 @@
+$(window ).on("load", function() {
+	$("#exampleModal").fadeIn();
+	$("#exampleModal").fadeIn("slow");
+	$("#exampleModal").fadeIn(5000);
+});
+$('#bouton').click(function(){
+	$('#exampleModal').hide(1000);
+})
+
+
+
+$("#sc").click(function(){
+	window.location="index.html";
+})
+
+
+
+
+
+
+
+
 // -------------- image piano ----------- //
 
 //"<img class='image img-responsive' width='150' height='100' src='image1.jpg'/>"
@@ -48,16 +70,17 @@ var objet = {};
 $('#validerPlayer1').click(function(){
 	var joueur1 = $('#player1').val();
 	objet.joueur1 = joueur1;
-
+	
 	$('#textePlayer1').html("Bienvenue " + objet.joueur1);
-	console.log(joueur)
+	
 });
 
 $('#player1').change(function(){
 	objet.joueur1 = $('#player1').val();
 
-	$('#textePlayer1').html("Bienvenue " + objet.joueur1);
 
+	$('#textePlayer1').html("Bienvenue " + objet.joueur1);
+console.log(objet);
 });
 
 //---- player2---//
@@ -75,6 +98,7 @@ $('#player2').change(function(){
 	objet.joueur2 = $('#player2').val();
 
 	$('#textePlayer2').html("Bienvenu "+ objet.joueur2);
+console.log(objet)
 });
 
 
@@ -128,11 +152,11 @@ function verif(a, b, c){
 
 		if (a==piano){
 
-			alert("joueur 1 gagne ");
+			alert(objet.joueur1 + " défonce la gueule a " + objet.joueur2);
 
 		}else if(a==occitane){
 
-			alert("joueur 2 gagne ");
+			alert(objet.joueur2 + " deboite la gueule a " + objet.joueur1);
 
 		}
 	}
