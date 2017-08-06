@@ -1,3 +1,4 @@
+
 $(window ).on("load", function() {
 
 	$('#loading').hide();
@@ -5,15 +6,14 @@ $(window ).on("load", function() {
 	$("#exampleModal").fadeIn("slow");
 	$("#exampleModal").fadeIn(3000);
 
-	$('#sc').click(function(){
 
-
-	}),
 	$('#bouton').click(function(){
 		$('#exampleModal').hide(2000);
+	
+	});
 
-	}),
-	$('#sc').click(function(){
+	
+	$('#sc').click(function pseudo(){
 
 		$('#loading').fadeIn().delay(3000).fadeOut();
 
@@ -21,14 +21,22 @@ $(window ).on("load", function() {
 			setTimeout(function(){ 
 				$('#exampleModal').fadeOut(1000, function(){
 					window.location.href = "index.html"
+						
+					
 				})
 			}, 4000);
 
 		})
-	
+		var objet = {};
+		var joueur1 = $('#player1').val();
+		objet.joueur1 = joueur1;
+		
+		
+		$('#textePlayer1').html(objet.joueur1);
+
 	});
 	
-
+pseudo()
 
 
 });
@@ -85,43 +93,43 @@ $(window ).on("load", function() {
 
 //---------------------- enregistrer les joueurs ------------------------//
 
-var objet = {};
+// var objet = {};
 
-//--- player1 ----//
+// //--- player1 ----//
 
-$('#sc').click(function(){
+// $('#sc').click(function(){
 
-	var joueur1 = $('#player1').val();
-	objet.joueur1 = joueur1;
+// 	var joueur1 = $('#player1').val();
+// 	objet.joueur1 = joueur1;
 	
-	$('#textePlayer1').html(objet.joueur1);
+// 	$('#textePlayer1').html(objet.joueur1);
 	
-});
+// });
 
-$('#player1').change(function(){
-	objet.joueur1 = $('#player1').val();
-
-
-	$('#textePlayer1').html(objet.joueur1);
-
-});
-
-//---- player2---//
+// $('#player1').change(function(){
+// 	objet.joueur1 = $('#player1').val();
 
 
+// 	$('#textePlayer1').html(objet.joueur1);
 
-$('#sc').click(function(){
-	var joueur2 = $('#player2').val();
-	objet.joueur2 = joueur2;
+// });
 
-	$('#textePlayer2').html(objet.joueur2);
-});
+// //---- player2---//
 
-$('#player2').change(function(){
-	objet.joueur2 = $('#player2').val();
 
-	 $('#textePlayer2').html(objet.joueur2);
-});
+
+// $('#sc').click(function(){
+// 	var joueur2 = $('#player2').val();
+// 	objet.joueur2 = joueur2;
+
+// 	$('#textePlayer2').html(objet.joueur2);
+// });
+
+// $('#player2').change(function(){
+// 	objet.joueur2 = $('#player2').val();
+
+// 	$('#textePlayer2').html(objet.joueur2);
+// });
 
 
 // --------------------------------- deplacer une image --------//
